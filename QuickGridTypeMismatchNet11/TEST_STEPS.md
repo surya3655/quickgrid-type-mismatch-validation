@@ -1,16 +1,49 @@
 # Exact validation steps and evidence
 
+## Development validation runner
+
+Run all Development scenarios, capture screenshots, and assert the complete
+browser and server diagnostics:
+
+```powershell
+.\Run-AutomatedDevelopmentValidation.ps1
+```
+
+The script replaces the `evidence/development-latest` directory.
+It exits with a nonzero status when a browser assertion, full Development
+diagnostic, scenario marker, or successful control result is missing. Detailed
+assertion results are written to `E-DEV-21-results.json`.
+
+## Production validation runner
+
+Run all Production scenarios, capture screenshots, and assert the server log:
+
+```powershell
+.\Run-AutomatedProductionValidation.ps1
+```
+
+The script replaces the `evidence/production-latest` directory.
+It exits with a nonzero status when a browser assertion, expected diagnostic,
+scenario marker, or successful control result is missing. Detailed assertion
+results are written to `E-PROD-21-results.json`.
+
 ## 1. Evidence rules
 
 Do not mark a scenario Passed from browser appearance alone.
 
 Every scenario must have:
 
-1. A screenshot showing the URL and visible result.
-2. The matching `VALIDATION_SCENARIO_START` record.
-3. The framework exception or successful completion record.
-4. The SDK, package, runtime, environment, and QuickGrid version evidence.
-5. A unique evidence filename tied to the scenario ID.
+1. `E-DEV-00-source-revision.txt` or `E-PROD-00-source-revision.txt` showing
+   the exact Git commit and whether the worktree was clean.
+2. A screenshot showing the URL and visible result.
+3. The matching `VALIDATION_SCENARIO_START` record.
+4. The framework exception or successful completion record.
+5. The SDK, package, runtime, environment, and QuickGrid version evidence.
+6. A unique evidence filename tied to the scenario ID.
+
+Final submission evidence must be generated from a clean worktree after the
+corrective changes are committed. Use that tested commit SHA, rather than
+`main`, in immutable report links.
 
 For broken Interactive Server scenarios, the observed exception appears in an
 evidence panel. The panel is not sufficient without the matching server log.

@@ -1,0 +1,9 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+Project 'QuickGridTypeMismatchNet11' has the following package references
+   [net11.0]: 
+   Top-level Package                                   Requested                   Resolved             
+   > Microsoft.AspNetCore.App.Internal.Assets    (A)   [11.0.0-rc.1.26425.128, )   11.0.0-rc.1.26425.128
+   > Microsoft.AspNetCore.Components.QuickGrid         11.0.0-rc.1.26425.128       11.0.0-rc.1.26425.128
+
+(A) : Auto-referenced package.

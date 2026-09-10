@@ -17,18 +17,11 @@
     <PropertyColumn Property="@(forecast => forecast.Date)" Title="Date" />
     <PropertyColumn Property="@(forecast => forecast.TemperatureC)" Title="Temperature (C)" />
 
-    <TemplateColumn TGridItem="Employee"
-                    Title="Employee last name"
-                    SortBy="@EmployeeSort">
-        @context.LastName
-    </TemplateColumn>
+    <EmployeeLastNameColumn />
 </QuickGrid>
 
 @code {
     private static readonly IQueryable<WeatherForecast> Forecasts = SampleData.Forecasts;
-
-    private static readonly GridSort<Employee> EmployeeSort =
-        GridSort<Employee>.ByAscending(employee => employee.LastName);
 
     protected override void OnInitialized()
     {

@@ -1,0 +1,48 @@
+Commit=a17f4bfc45b6c76c112c3b3f036608e505e2eb17
+Worktree=Dirty
+Status:
+M QuickGridTypeMismatchNet11/Components/Pages/InteractiveBrokenTitled.razor
+ M QuickGridTypeMismatchNet11/Components/Pages/SsrBrokenTitled.razor
+ M QuickGridTypeMismatchNet11/Program.cs
+ M QuickGridTypeMismatchNet11/TEST_STEPS.md
+ M evidence/TEST-REPORT.md
+ D evidence/screenshot/tc-01.png
+ D evidence/screenshot/tc-02.png
+ D evidence/screenshot/tc-03.png
+ D evidence/screenshot/tc-04.png
+ D evidence/screenshot/tc-05.png
+ D evidence/screenshot/tc-06-01.png
+ D evidence/screenshot/tc-06-02.png
+ D evidence/screenshot/tc-07-01.png
+ D evidence/screenshot/tc-07-02.png
+ D evidence/screenshot/tc-08-01.png
+ D evidence/screenshot/tc-08-02.png
+ D evidence/screenshot/tc-09-01.png
+ D evidence/screenshot/tc-09-02.png
+?? .gitignore
+?? QuickGridTypeMismatchNet11/Components/EmployeeLastNameColumn.razor
+?? QuickGridTypeMismatchNet11/Run-AutomatedDevelopmentValidation.ps1
+?? QuickGridTypeMismatchNet11/Run-AutomatedProductionValidation.ps1
+?? QuickGridTypeMismatchNet11/Start-ProductionValidation.ps1
+?? QuickGridTypeMismatchNet11/automation/
+?? QuickGridTypeMismatchNet11/evidence/
+?? evidence/development-automated-20260910-162144/
+?? evidence/development-automated-20260910-163112/
+?? evidence/development-automated-20260910-164229/
+?? evidence/development-automated-20260910-164516/
+?? evidence/development-automated-20260910-164554/
+?? evidence/development-automated-20260910-165254/
+?? evidence/development-automated-20260910-165548/
+?? evidence/development-automated-20260910-171034/
+?? evidence/development-automated-20260910-171207/
+?? evidence/production-20260910-150250/
+?? evidence/production-20260910-153938/
+?? evidence/production-20260910-155450/
+?? evidence/production-20260910-165605/
+?? evidence/production-20260910-165912/
+?? evidence/production-automated-20260910-115209/
+?? evidence/production-automated-20260910-115233/
+?? evidence/production-automated-20260910-115850/
+?? evidence/production-automated-20260910-165957/
+?? evidence/screenshot/development/
+?? evidence/screenshot/production/

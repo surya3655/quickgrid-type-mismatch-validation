@@ -1,0 +1,42 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v11.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v11.0": {
+      "QuickGridTypeMismatchNet11/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.QuickGrid": "11.0.0-rc.1.26425.128"
+        },
+        "runtime": {
+          "QuickGridTypeMismatchNet11.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.QuickGrid/11.0.0-rc.1.26425.128": {
+        "runtime": {
+          "lib/net11.0/Microsoft.AspNetCore.Components.QuickGrid.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.42628",
+            "localPath": "Microsoft.AspNetCore.Components.QuickGrid.dll"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QuickGridTypeMismatchNet11/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Components.QuickGrid/11.0.0-rc.1.26425.128": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+ZIbM/s0jK8Vzlpi+SDgeoQkeX186/f3SD5gTrKTnqHgTaajz3n24Ua3nzinwY3BG8G9gYKYOzlmYiFNia0Mpg==",
+      "path": "microsoft.aspnetcore.components.quickgrid/11.0.0-rc.1.26425.128",
+      "hashPath": "microsoft.aspnetcore.components.quickgrid.11.0.0-rc.1.26425.128.nupkg.sha512"
+    }
+  }
+}

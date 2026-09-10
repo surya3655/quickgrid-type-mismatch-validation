@@ -1,0 +1,10 @@
+<TemplateColumn TGridItem="Employee"
+                Title="Employee last name"
+                SortBy="@EmployeeSort">
+    @context.LastName
+</TemplateColumn>
+
+@code {
+    private static readonly GridSort<Employee> EmployeeSort =
+        GridSort<Employee>.ByAscending(employee => employee.LastName);
+}

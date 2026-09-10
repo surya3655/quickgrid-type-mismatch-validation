@@ -1,0 +1,207 @@
+[
+  {
+    "name": "Git source revision captured",
+    "status": "PASS",
+    "details": "a17f4bfc45b6c76c112c3b3f036608e505e2eb17; Worktree=Dirty"
+  },
+  {
+    "name": "Pinned SDK selected",
+    "status": "PASS",
+    "details": "11.0.100-rc.1.26425.128"
+  },
+  {
+    "name": "Expected QuickGrid package resolved",
+    "status": "PASS",
+    "details": "11.0.0-rc.1.26425.128"
+  },
+  {
+    "name": "BASELINE-EMPLOYEE renders employee rows",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-TEMPLATE-TITLED browser shows the exception type",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column 'Employee last name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column 'Employee last name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not matc"
+  },
+  {
+    "name": "SSR-TEMPLATE-TITLED browser shows the full type",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column 'Employee last name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column 'Employee last name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not matc"
+  },
+  {
+    "name": "SSR-TEMPLATE-TITLED browser shows the column diagnostic",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column 'Employee last name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column 'Employee last name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not matc"
+  },
+  {
+    "name": "SSR-TEMPLATE-UNNAMED browser shows the exception type",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column '(unnamed)' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column '(unnamed)' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent Quick"
+  },
+  {
+    "name": "SSR-TEMPLATE-UNNAMED browser shows the full type",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column '(unnamed)' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column '(unnamed)' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent Quick"
+  },
+  {
+    "name": "SSR-TEMPLATE-UNNAMED browser shows the column diagnostic",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column '(unnamed)' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column '(unnamed)' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent Quick"
+  },
+  {
+    "name": "SSR-PROPERTY-TITLED browser shows the exception type",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column 'First name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column 'First name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent Qui"
+  },
+  {
+    "name": "SSR-PROPERTY-TITLED browser shows the full type",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column 'First name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column 'First name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent Qui"
+  },
+  {
+    "name": "SSR-PROPERTY-TITLED browser shows the column diagnostic",
+    "status": "PASS",
+    "details": "An unhandled exception occurred while processing the request. InvalidOperationException: Column 'First name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent QuickGrid's item type. Microsoft.AspNetCore.Components.QuickGrid.ColumnBase<TGridItem>.EnsureColumnMatchesGrid() Stack Query Cookies Headers Routing InvalidOperationException: Column 'First name' expects item type 'QuickGridTypeMismatchNet11.Models.Employee', which does not match the parent Qui"
+  },
+  {
+    "name": "SSR-FIXED renders weather rows",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED browser shows the exception type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED browser shows the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED browser shows the column diagnostic",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED displays a Run ID",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED browser shows the exception type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED browser shows the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED browser shows the column diagnostic",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED displays a Run ID",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED browser shows the exception type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED browser shows the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED browser shows the column diagnostic",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED displays a Run ID",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "BASELINE-EMPLOYEE scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-TEMPLATE-TITLED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-TEMPLATE-UNNAMED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-PROPERTY-TITLED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-FIXED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-FIXED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Server log identifies Development",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Server log contains no Production markers",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "No NullReferenceException observed",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Interactive circuit opened",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Blazor framework script served successfully",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Automated Development validation",
+    "status": "PASS",
+    "details": "D:\\ValidationSample\\quickgrid-type-mismatch-validation\\evidence\\development-automated-20260910-171207"
+  }
+]

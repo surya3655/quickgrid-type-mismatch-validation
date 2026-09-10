@@ -1,0 +1,12 @@
+{
+  "name": "quickgrid-production-validation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:development": "node production-validation.mjs --environment=Development",
+    "test:production": "node production-validation.mjs --environment=Production"
+  },
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

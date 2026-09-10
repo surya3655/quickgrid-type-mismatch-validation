@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Git source revision captured",
+    "status": "PASS",
+    "details": "a17f4bfc45b6c76c112c3b3f036608e505e2eb17; Worktree=Dirty"
+  },
+  {
+    "name": "Pinned SDK selected",
+    "status": "PASS",
+    "details": "11.0.100-rc.1.26425.128"
+  },
+  {
+    "name": "Expected QuickGrid package resolved",
+    "status": "PASS",
+    "details": "11.0.0-rc.1.26425.128"
+  },
+  {
+    "name": "BASELINE-EMPLOYEE renders employee rows",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-TEMPLATE-TITLED browser hides the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-TEMPLATE-UNNAMED browser hides the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-PROPERTY-TITLED browser hides the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-FIXED renders weather rows",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED browser details are generic",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED browser hides the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED displays a Run ID",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED browser details are generic",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED browser hides the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED displays a Run ID",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED browser details are generic",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED browser hides the full type",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED displays a Run ID",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "BASELINE-EMPLOYEE scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-TEMPLATE-TITLED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-TEMPLATE-UNNAMED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-PROPERTY-TITLED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "SSR-FIXED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-TEMPLATE-UNNAMED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-PROPERTY-TITLED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "INTERACTIVE-FIXED scenario marker captured",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Server log identifies Production",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Server log contains no Development markers",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "No NullReferenceException observed",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Interactive circuit opened",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Blazor framework script served successfully",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "name": "Automated Production validation",
+    "status": "PASS",
+    "details": "D:\\ValidationSample\\quickgrid-type-mismatch-validation\\evidence\\production-automated-20260910-171454"
+  }
+]
