@@ -1,0 +1,35 @@
+@page "/ssr/broken-property"
+@inject ValidationRecorder Evidence
+
+<PageTitle>Static SSR PropertyColumn mismatch</PageTitle>
+
+<h1>Static SSR: mismatched PropertyColumn</h1>
+
+<RuntimeEvidencePanel />
+
+<p>
+    The parent grid contains weather forecasts, but this
+    <code>PropertyColumn</code> is explicitly typed for employees.
+</p>
+
+<QuickGrid Items="@Forecasts" Class="quick-grid">
+    <PropertyColumn Property="@(forecast => forecast.Date)" Title="Date" />
+    <PropertyColumn TGridItem="Employee"
+                    TProp="string"
+                    Property="@(employee => employee.FirstName)"
+                    Title="First name" />
+</QuickGrid>
+
+@code {
+    private static readonly IQueryable<WeatherForecast> Forecasts = SampleData.Forecasts;
+
+    protected override void OnInitialized()
+    {
+        Evidence.LogScenarioStart(
+            "SSR-PROPERTY-TITLED",
+            "Static SSR",
+            typeof(WeatherForecast),
+            typeof(Employee),
+            "InvalidOperationException must name 'First name' and the full Employee type.");
+    }
+}

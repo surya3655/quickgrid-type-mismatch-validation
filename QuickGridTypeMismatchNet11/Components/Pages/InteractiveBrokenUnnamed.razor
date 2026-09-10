@@ -1,0 +1,70 @@
+@page "/interactive/broken-unnamed"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+@inject ValidationRecorder Evidence
+
+<PageTitle>Interactive Server unnamed mismatch</PageTitle>
+
+<h1>Interactive Server: unnamed mismatched column</h1>
+
+<RuntimeEvidencePanel />
+
+<p>
+    The employee column has no title. The circuit log must use
+    <code>(unnamed)</code>.
+</p>
+
+<ol>
+    <li>Keep the server console visible.</li>
+    <li>Click <strong>Run unnamed mismatch</strong> once.</li>
+    <li>Capture the scenario-start log and the exception containing <code>(unnamed)</code>.</li>
+</ol>
+
+<button id="run-interactive-unnamed"
+        class="action-button danger"
+        @onclick="RunScenario">
+    Run unnamed mismatch
+</button>
+
+@if (_showMismatch)
+{
+    <EvidenceErrorBoundary ScenarioId="INTERACTIVE-TEMPLATE-UNNAMED"
+                           RunId="@_runId">
+        <ChildContent>
+            <QuickGrid Items="@Forecasts" Class="quick-grid">
+                <PropertyColumn Property="@(forecast => forecast.Date)" Title="Date" />
+
+                <TemplateColumn TGridItem="Employee"
+                                SortBy="@EmployeeSort">
+                    @context.LastName
+                </TemplateColumn>
+            </QuickGrid>
+        </ChildContent>
+        <ErrorContent Context="exception">
+            <EvidenceErrorDisplay ScenarioId="INTERACTIVE-TEMPLATE-UNNAMED"
+                                  RunId="@_runId"
+                                  Exception="@exception" />
+        </ErrorContent>
+    </EvidenceErrorBoundary>
+}
+
+@code {
+    private bool _showMismatch;
+    private string _runId = "(not-started)";
+
+    private static readonly IQueryable<WeatherForecast> Forecasts = SampleData.Forecasts;
+
+    private static readonly GridSort<Employee> EmployeeSort =
+        GridSort<Employee>.ByAscending(employee => employee.LastName);
+
+    private void RunScenario()
+    {
+        _runId = Evidence.LogScenarioStart(
+            "INTERACTIVE-TEMPLATE-UNNAMED",
+            "Interactive Server, prerender disabled",
+            typeof(WeatherForecast),
+            typeof(Employee),
+            "InvalidOperationException must identify the column as '(unnamed)'.");
+
+        _showMismatch = true;
+    }
+}

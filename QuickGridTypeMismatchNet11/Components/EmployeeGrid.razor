@@ -1,0 +1,16 @@
+<QuickGrid Items="@Employees" Class="quick-grid">
+    <PropertyColumn Property="@(employee => employee.FirstName)" Title="First name" />
+    <TemplateColumn TGridItem="Employee"
+                    Title="Last name"
+                    SortBy="@EmployeeSort">
+        @context.LastName
+    </TemplateColumn>
+    <PropertyColumn Property="@(employee => employee.Department)" Title="Department" />
+</QuickGrid>
+
+@code {
+    private static readonly IQueryable<Employee> Employees = SampleData.Employees;
+
+    private static readonly GridSort<Employee> EmployeeSort =
+        GridSort<Employee>.ByAscending(employee => employee.LastName);
+}

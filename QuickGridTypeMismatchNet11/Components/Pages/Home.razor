@@ -1,0 +1,64 @@
+@page "/"
+
+<PageTitle>QuickGrid .NET 11 validation</PageTitle>
+
+<h1>QuickGrid column item-type mismatch</h1>
+
+<RuntimeEvidencePanel />
+
+<p>
+    The grid was changed from employee data to weather forecasts, but an
+    employee-typed column was accidentally left behind. The .NET 11 fix doesn't
+    make the invalid grid render. It replaces the old null-reference failure
+    with a useful <code>InvalidOperationException</code>.
+</p>
+
+<h2>Baseline before the refactor</h2>
+
+<a id="open-baseline-employees"
+   class="action-button"
+   href="/baseline/employees"
+   data-enhance-nav="false">
+    Open employee baseline
+</a>
+
+<h2>Static server-side rendering</h2>
+
+<div class="button-grid">
+    <a id="open-ssr-titled" class="action-button danger" href="/ssr/broken-titled" data-enhance-nav="false">
+        Open SSR titled mismatch
+    </a>
+    <a id="open-ssr-unnamed" class="action-button danger" href="/ssr/broken-unnamed" data-enhance-nav="false">
+        Open SSR unnamed mismatch
+    </a>
+    <a id="open-ssr-property" class="action-button danger" href="/ssr/broken-property" data-enhance-nav="false">
+        Open SSR PropertyColumn mismatch
+    </a>
+    <a id="open-ssr-fixed" class="action-button success" href="/ssr/fixed" data-enhance-nav="false">
+        Open SSR corrected grid
+    </a>
+</div>
+
+<h2>Interactive Server</h2>
+
+<div class="button-grid">
+    <a id="open-interactive-titled" class="action-button danger" href="/interactive/broken-titled" data-enhance-nav="false">
+        Open Interactive titled mismatch
+    </a>
+    <a id="open-interactive-unnamed" class="action-button danger" href="/interactive/broken-unnamed" data-enhance-nav="false">
+        Open Interactive unnamed mismatch
+    </a>
+    <a id="open-interactive-property" class="action-button danger" href="/interactive/broken-property" data-enhance-nav="false">
+        Open Interactive PropertyColumn mismatch
+    </a>
+    <a id="open-interactive-fixed" class="action-button success" href="/interactive/fixed" data-enhance-nav="false">
+        Open Interactive corrected grid
+    </a>
+</div>
+
+<section class="note">
+    <strong>Expected mismatch:</strong>
+    parent <code>QuickGrid&lt;WeatherForecast&gt;</code> with a leftover
+    <code>TemplateColumn&lt;Employee&gt;</code> and
+    <code>GridSort&lt;Employee&gt;</code>.
+</section>

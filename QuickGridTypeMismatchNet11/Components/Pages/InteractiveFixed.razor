@@ -1,0 +1,62 @@
+@page "/interactive/fixed"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+@inject ValidationRecorder Evidence
+
+<PageTitle>Interactive Server corrected grid</PageTitle>
+
+<h1>Interactive Server: corrected weather grid</h1>
+
+<RuntimeEvidencePanel />
+
+<p>
+    The employee column was replaced with a correctly typed weather column.
+</p>
+
+<ol>
+    <li>Keep the server console visible.</li>
+    <li>Click <strong>Render corrected grid</strong>.</li>
+    <li>Confirm Date, Temperature, and Summary rows appear.</li>
+    <li>Confirm the log contains <code>VALIDATION_RENDER_COMPLETED</code>.</li>
+</ol>
+
+<button id="run-interactive-fixed"
+        class="action-button success"
+        @onclick="RunScenario">
+    Render corrected grid
+</button>
+
+@if (_showGrid)
+{
+    <WeatherGrid />
+}
+
+@code {
+    private bool _showGrid;
+    private bool _logCompletion;
+    private string? _runId;
+
+    private void RunScenario()
+    {
+        _runId = Evidence.LogScenarioStart(
+            "INTERACTIVE-FIXED",
+            "Interactive Server, prerender disabled",
+            typeof(WeatherForecast),
+            typeof(WeatherForecast),
+            "Corrected grid must render Date, Temperature, and Summary rows.");
+
+        _showGrid = true;
+        _logCompletion = true;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (_logCompletion && _runId is not null)
+        {
+            _logCompletion = false;
+            Evidence.LogRenderCompleted(
+                _runId,
+                "INTERACTIVE-FIXED",
+                "Corrected Interactive Server grid completed rendering.");
+        }
+    }
+}

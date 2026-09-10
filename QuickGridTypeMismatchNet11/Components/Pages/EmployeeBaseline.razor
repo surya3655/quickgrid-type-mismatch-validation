@@ -1,0 +1,27 @@
+@page "/baseline/employees"
+@inject ValidationRecorder Evidence
+
+<PageTitle>Employee-grid baseline</PageTitle>
+
+<h1>Baseline: employee grid before the refactor</h1>
+
+<RuntimeEvidencePanel />
+
+<p>
+    The employee columns match <code>QuickGrid&lt;Employee&gt;</code>, so the
+    grid renders normally.
+</p>
+
+<EmployeeGrid />
+
+@code {
+    protected override void OnInitialized()
+    {
+        Evidence.LogScenarioStart(
+            "BASELINE-EMPLOYEE",
+            "Static SSR",
+            typeof(Employee),
+            typeof(Employee),
+            "Employee columns match the employee grid; HTTP request must complete with status 200.");
+    }
+}

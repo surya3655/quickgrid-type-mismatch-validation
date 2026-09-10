@@ -1,0 +1,32 @@
+@inject IWebHostEnvironment HostEnvironment
+
+<section class="evidence-error" role="alert">
+    <h2>Expected validation failure observed</h2>
+    <p><strong>Scenario:</strong> @ScenarioId</p>
+    <p><strong>Run ID:</strong> @RunId</p>
+
+    @if (HostEnvironment.IsDevelopment())
+    {
+        <p><strong>Exception type:</strong> @Exception.GetType().FullName</p>
+        <p><strong>Exception message:</strong></p>
+        <pre id="observed-exception-message">@Exception.Message</pre>
+    }
+    else
+    {
+        <p>
+            Production browser details are intentionally generic. Use the Run ID
+            to locate the complete VALIDATION_EXCEPTION_OBSERVED server log.
+        </p>
+    }
+</section>
+
+@code {
+    [Parameter, EditorRequired]
+    public string ScenarioId { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string RunId { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public Exception Exception { get; set; } = default!;
+}

@@ -1,0 +1,78 @@
+@page "/interactive/broken-titled"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+@inject ValidationRecorder Evidence
+
+<PageTitle>Interactive Server titled mismatch</PageTitle>
+
+<h1>Interactive Server: titled mismatched column</h1>
+
+<RuntimeEvidencePanel />
+
+<p>
+    Prerendering is disabled so the mismatch occurs after the Interactive Server
+    circuit connects. This variant also enables QuickGrid virtualization to
+    match the repository end-to-end regression scenario. The evidence boundary
+    correlates the browser result and server exception using the same Run ID.
+</p>
+
+<ol>
+    <li>Keep the server console visible.</li>
+    <li>Confirm the runtime panel shows the pinned .NET 11 RC1 values.</li>
+    <li>Click <strong>Run titled virtualized mismatch</strong> once.</li>
+    <li>Capture the scenario-start log and the following exception.</li>
+</ol>
+
+<button id="run-interactive-titled"
+        class="action-button danger"
+        @onclick="RunScenario">
+    Run titled virtualized mismatch
+</button>
+
+@if (_showMismatch)
+{
+    <EvidenceErrorBoundary ScenarioId="INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED"
+                           RunId="@_runId">
+        <ChildContent>
+            <QuickGrid Items="@Forecasts"
+                       Class="quick-grid virtualized-grid"
+                       Virtualize="true"
+                       ItemSize="48">
+                <PropertyColumn Property="@(forecast => forecast.Date)" Title="Date" />
+                <PropertyColumn Property="@(forecast => forecast.TemperatureC)" Title="Temperature (C)" />
+
+                <TemplateColumn TGridItem="Employee"
+                                Title="Employee last name"
+                                SortBy="@EmployeeSort">
+                    @context.LastName
+                </TemplateColumn>
+            </QuickGrid>
+        </ChildContent>
+        <ErrorContent Context="exception">
+            <EvidenceErrorDisplay ScenarioId="INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED"
+                                  RunId="@_runId"
+                                  Exception="@exception" />
+        </ErrorContent>
+    </EvidenceErrorBoundary>
+}
+
+@code {
+    private bool _showMismatch;
+    private string _runId = "(not-started)";
+
+    private static readonly IQueryable<WeatherForecast> Forecasts = SampleData.Forecasts;
+
+    private static readonly GridSort<Employee> EmployeeSort =
+        GridSort<Employee>.ByAscending(employee => employee.LastName);
+
+    private void RunScenario()
+    {
+        _runId = Evidence.LogScenarioStart(
+            "INTERACTIVE-TEMPLATE-TITLED-VIRTUALIZED",
+            "Interactive Server, prerender disabled, Virtualize=true",
+            typeof(WeatherForecast),
+            typeof(Employee),
+            "InvalidOperationException must name 'Employee last name' and the full Employee type.");
+
+        _showMismatch = true;
+    }
+}

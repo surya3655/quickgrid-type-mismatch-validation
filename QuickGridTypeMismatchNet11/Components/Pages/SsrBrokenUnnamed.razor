@@ -1,0 +1,39 @@
+@page "/ssr/broken-unnamed"
+@inject ValidationRecorder Evidence
+
+<PageTitle>Static SSR unnamed mismatch</PageTitle>
+
+<h1>Static SSR: unnamed mismatched column</h1>
+
+<RuntimeEvidencePanel />
+
+<p>
+    This variant omits <code>Title</code>. The server log must identify the
+    column as <code>(unnamed)</code>.
+</p>
+
+<QuickGrid Items="@Forecasts" Class="quick-grid">
+    <PropertyColumn Property="@(forecast => forecast.Date)" Title="Date" />
+
+    <TemplateColumn TGridItem="Employee"
+                    SortBy="@EmployeeSort">
+        @context.LastName
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private static readonly IQueryable<WeatherForecast> Forecasts = SampleData.Forecasts;
+
+    private static readonly GridSort<Employee> EmployeeSort =
+        GridSort<Employee>.ByAscending(employee => employee.LastName);
+
+    protected override void OnInitialized()
+    {
+        Evidence.LogScenarioStart(
+            "SSR-TEMPLATE-UNNAMED",
+            "Static SSR",
+            typeof(WeatherForecast),
+            typeof(Employee),
+            "InvalidOperationException must identify the column as '(unnamed)'.");
+    }
+}

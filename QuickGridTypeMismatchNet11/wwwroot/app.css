@@ -1,0 +1,150 @@
+:root {
+    font-family: Inter, "Segoe UI", sans-serif;
+    color: #172033;
+    background: #f5f7fb;
+}
+
+body {
+    margin: 0;
+}
+
+.site-header {
+    background: #16284a;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.site-header a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1,
+h2 {
+    color: #10254c;
+}
+
+a {
+    color: #075ea8;
+}
+
+code {
+    background: #e9eef7;
+    border-radius: 0.2rem;
+    padding: 0.1rem 0.3rem;
+}
+
+.scenario-list li {
+    margin: 0.65rem 0;
+}
+
+.button-grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.action-button {
+    background: #1769aa;
+    border: 0;
+    border-radius: 0.35rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.action-button.danger {
+    background: #a4262c;
+}
+
+.action-button.success {
+    background: #107c10;
+}
+
+.action-button:hover {
+    filter: brightness(0.92);
+}
+
+.note {
+    background: #e8f1ff;
+    border-left: 4px solid #2474c6;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.quick-grid {
+    background: white;
+    border: 1px solid #d7deea;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.quick-grid th,
+.quick-grid td {
+    border-bottom: 1px solid #e2e7f0;
+    padding: 0.7rem;
+    text-align: left;
+}
+
+.quick-grid th {
+    background: #edf3fb;
+}
+
+.virtualized-grid {
+    height: 260px;
+    overflow-y: auto;
+}
+
+.runtime-panel {
+    background: white;
+    border: 1px solid #c7d2e4;
+    border-radius: 0.4rem;
+    margin: 1rem 0 1.5rem;
+    padding: 1rem;
+}
+
+.runtime-panel h2 {
+    margin-top: 0;
+}
+
+.runtime-panel dl {
+    display: grid;
+    gap: 0.4rem 1rem;
+    grid-template-columns: minmax(190px, auto) 1fr;
+    margin-bottom: 0;
+}
+
+.runtime-panel dt {
+    font-weight: 700;
+}
+
+.runtime-panel dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.evidence-error {
+    background: #fff4ce;
+    border: 2px solid #a4262c;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.evidence-error pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+}

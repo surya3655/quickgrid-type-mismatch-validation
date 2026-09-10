@@ -1,0 +1,26 @@
+@page "/ssr/fixed"
+@inject ValidationRecorder Evidence
+
+<PageTitle>Static SSR corrected grid</PageTitle>
+
+<h1>Static SSR: corrected weather grid</h1>
+
+<RuntimeEvidencePanel />
+
+<p>
+    Only the mismatched employee column was replaced with a weather column.
+</p>
+
+<WeatherGrid />
+
+@code {
+    protected override void OnInitialized()
+    {
+        Evidence.LogScenarioStart(
+            "SSR-FIXED",
+            "Static SSR",
+            typeof(WeatherForecast),
+            typeof(WeatherForecast),
+            "Corrected grid must render and the HTTP request must complete with status 200.");
+    }
+}

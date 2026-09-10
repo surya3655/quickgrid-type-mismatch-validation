@@ -1,0 +1,36 @@
+@inject ValidationEnvironmentInfo EnvironmentInfo
+
+<section class="runtime-panel" aria-label="Runtime validation details">
+    <h2>Runtime validation details</h2>
+    <dl>
+        <dt>Expected SDK</dt>
+        <dd id="expected-sdk">@ValidationEnvironmentInfo.ExpectedSdkVersion</dd>
+
+        <dt>Runtime version</dt>
+        <dd id="runtime-version">@EnvironmentInfo.RuntimeVersion</dd>
+
+        <dt>Framework</dt>
+        <dd id="framework-description">@EnvironmentInfo.FrameworkDescription</dd>
+
+        <dt>Target framework</dt>
+        <dd id="target-framework">@EnvironmentInfo.TargetFramework</dd>
+
+        <dt>Environment</dt>
+        <dd id="environment-name">@EnvironmentInfo.EnvironmentName</dd>
+
+        <dt>Expected QuickGrid package</dt>
+        <dd id="expected-quickgrid">@ValidationEnvironmentInfo.ExpectedQuickGridPackageVersion</dd>
+
+        <dt>QuickGrid assembly</dt>
+        <dd id="quickgrid-assembly">@EnvironmentInfo.QuickGridAssemblyVersion</dd>
+
+        <dt>QuickGrid informational version</dt>
+        <dd id="quickgrid-informational">@EnvironmentInfo.QuickGridInformationalVersion</dd>
+
+        <dt>Operating system</dt>
+        <dd id="operating-system">@EnvironmentInfo.OperatingSystem</dd>
+
+        <dt>Process architecture</dt>
+        <dd id="process-architecture">@EnvironmentInfo.ProcessArchitecture</dd>
+    </dl>
+</section>
