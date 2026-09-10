@@ -88,5 +88,5 @@ circuit connects. The corrected Interactive Server scenario records
   scenario, exception, request, or render-completion records.
 
 The detailed execution procedure and acceptance criteria are documented in
-[TEST_STEPS.md](https://github.com/surya3655/quickgrid-type-mismatch-validation/blob/main/TEST_STEPS.md)
-and [ACCEPTANCE_CHECKLIST.md](https://github.com/surya3655/quickgrid-type-mismatch-validation/blob/main/ACCEPTANCE_CHECKLIST.md).
+[TEST_STEPS.md](https://github.com/surya3655/quickgrid-type-mismatch-validation/blob/main/QuickGridTypeMismatchNet11/TEST_STEPS.md)
+and [ACCEPTANCE_CHECKLIST.md](https://github.com/surya3655/quickgrid-type-mismatch-validation/blob/main/QuickGridTypeMismatchNet11/ACCEPTANCE_CHECKLIST.md).
